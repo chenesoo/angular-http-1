@@ -6,10 +6,11 @@
 //  "thumbnailUrl": "https://via.placeholder.com/150/92c952"
 // }
 
-export interface Photo {
-  albumId: number;
+export interface Image {
   id: number;
-  title: string;
+  author: string;
+  width: number;
+  height: number;
   url: string;
-  thumbnailUrl: string;
+  download_url: string;
 }

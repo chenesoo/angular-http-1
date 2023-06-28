@@ -1,16 +1,14 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Photo } from './photo.model';
+import { Image } from './picsum.model';
 
 @Injectable({
   providedIn: 'root',
 })
-export class PhotoService {
+export class ImageService {
   constructor(private http: HttpClient) {}
 
-  getPhotoList(): Promise<Photo[] | undefined> {
-    return this.http
-      .get<Photo[]>('https://jsonplaceholder.typicode.com/photos')
-      .toPromise();
+  getImageList(): Promise<Image[] | undefined> {
+    return this.http.get<Image[]>('https://picsum.photos/v2/list').toPromise();
   }
 }

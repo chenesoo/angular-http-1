@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Photo } from './photo.model';
-import { PhotoService } from './photo.service';
+import { Image } from './picsum.model';
+import { ImageService } from './picsum.service';
 
 @Component({
   selector: 'app-root',
@@ -9,13 +9,13 @@ import { PhotoService } from './photo.service';
 })
 export class AppComponent implements OnInit {
   name = 'Angular';
-  photoList: Photo[] | undefined;
+  imageList: Image[] | undefined;
 
-  constructor(private photoService: PhotoService) {}
+  constructor(private imageService: ImageService) {}
 
   ngOnInit(): void {
-    this.photoService.getPhotoList().then((x) => {
-      this.photoList = x;
+    this.imageService.getImageList().then((x) => {
+      this.imageList = x;
     });
   }
 }
