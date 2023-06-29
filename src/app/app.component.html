@@ -2,7 +2,8 @@
 
 <ul>
   <li *ngFor="let p of imageList">
-    <img [src]="p.download_url" width="30%" />
-    {{ p.author }}
+    <img [src]="p.download_url" width="50%" />
+    <br />
+    {{ p.width }} x {{ p.height }} <br /><br />
   </li>
 </ul>
