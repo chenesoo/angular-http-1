@@ -2,7 +2,7 @@
 
 <ul>
   <li *ngFor="let p of imageList">
-    <img [src]="p.thumbnailUrl" />
-    {{ p.title }}
+    <img [src]="p.download_url" width="30%" />
+    {{ p.author }}
   </li>
 </ul>
